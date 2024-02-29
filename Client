@@ -36,7 +36,7 @@ public class App extends Application {
     public void start(Stage stage) {
 
 
-        stage.setTitle("Welcome to Your Virtual Scheduler");
+        stage.setTitle("Your Virtual Scheduler");
         
         Button add = new Button("Add Class");
         add.setOnAction(new EventHandler<ActionEvent>(){
