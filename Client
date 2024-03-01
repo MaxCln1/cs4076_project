@@ -1,3 +1,4 @@
+package com.mycompany.cs4076;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,7 +35,7 @@ public class App extends Application {
   TextField textField = new TextField("");
   Button button = new Button("Send");
 
-  Scene sceneAdd, sceneRemove;
+  Scene sceneAdd, sceneRemove, sceneTime;
   Stage stage;
   
     @Override
@@ -71,14 +72,27 @@ public class App extends Application {
         Scene scene = new Scene (grid1, 600, 600);
         
         //Add
-        Label label2 = new Label("Class Adder"); 
-        Button add2 = new Button("Add Class Here");
+        Label label2 = new Label("Class Adder");
+        Button classAdder = new Button("Add Class Here");
+        Button add2 = new Button("Go Back Home");
+        classAdder.setOnAction(e -> stage.setScene(sceneTime));
         add2.setOnAction(e -> stage.setScene(scene));
         
+        
         //Add layout
-        StackPane layout2 = new StackPane();
-        layout2.getChildren().addAll(label2, add2);
+        VBox layout2 = new VBox(20);
+        layout2.getChildren().addAll(label2, classAdder, add2);
         sceneAdd = new Scene (layout2, 600, 600);
+        
+        //Time
+        Label label2_1 = new Label("Select time"); 
+        Button timeBTN = new Button("Set Time");
+        timeBTN.setOnAction(e -> stage.setScene(scene));
+        
+        //Time layout
+        StackPane layout2_1 = new StackPane();
+        layout2_1.getChildren().addAll(label2_1, timeBTN);
+        sceneTime = new Scene (layout2_1, 600, 600);
         
         //Remove
         Label label3 = new Label("Class Remover"); 
