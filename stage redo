@@ -1,0 +1,13 @@
+@Override
+    public void start(Stage primaryStage) {
+        addButton.setOnAction(e -> sendRequest("Add Class"));
+        removeButton.setOnAction(e -> sendRequest("Remove Class"));
+        displayButton.setOnAction(e -> sendRequest("Display Schedule"));
+
+        VBox box = new VBox(classNameField, classTimeField, addButton, removeButton, displayButton, label);
+        Scene scene = new Scene(box, 640, 480);
+
+        primaryStage.setTitle("Class Scheduler");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
