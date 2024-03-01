@@ -4,7 +4,7 @@ import java.util.*;
 
 public class TCPEchoServer {
     private static ServerSocket servSock;
-    private static final int PORT = 1234;
+    private static final int PORT = 6578;
     private static Map<String, List<String>> classSchedules = new HashMap<>();
 
     public static void main(String[] args) {
